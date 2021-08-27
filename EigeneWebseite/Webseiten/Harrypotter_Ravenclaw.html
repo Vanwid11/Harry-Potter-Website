@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="Harrypotter_Ravenclaw.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="grid-container">
+    <div class="item1">
+      <italic>...dann machst du dich nach Ravenclaw, so wett ich, auf die Reise.</italic>
+    </div>
+    <div class="item2">Gründer:<br>
+      Rowena Ravenclaw<br>
+      <br>Tier:<br>Adler<br><br> Farben: <br> Blau & Bronze
+      <br><br>Charakter:<br>Intelligenz, Weisheit, Kreativität<br> & Orignialität<br>
+      <br>Hauptfiguren:<br>Luna Lovegood<br>Cho Chang</div>
+    <div class="item3">Ravenclaws Diadem<br><br>Typ:<br>Horkruxe
+      <br><br>Magische Eigenschaften:<br>Es verleiht Weisheit and der Person,<br>die es trägt.<br><br>Erster
+      Besitzer:<br>Rowena Ravenclaw
+
+    </div>
+    <div class="item4"></div>
+
+  </div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Bilder/Ravenclaw/Rovena Ravenclaw.jpg" style="width:40%">
+      <div class="text">Rowena Ravenclaw</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Bilder/Ravenclaw/Luna Lovegood 2.jpg" style="width:40%">
+      <div class="text">Luna Lovegood</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Bilder/Ravenclaw/Cho Chang.jpg" style="width:40%">
+      <div class="text">Cho Chang</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="Bilder/Ravenclaw/Ravenclaws Diadem.jpg" style="width:40%">
+      <div class="text">Ravenclaws Diadem</div>
+    </div>
+
+    
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</div>
+<div class="item4"></div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="Harrypotter_Hufflepuff.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="grid-container">
+    <div class="item1">
+      <italic>...man hilft dem andern, wo man kann und hat vor Arbeit keine Scheu.</italic>
+    </div>
+    <div class="item2">Gründer:<br>
+      Helga Hufflepuff<br>
+      <br>Tier:<br>Dachs<br><br> Farben: <br> Schwarz & Gelb
+      <br><br>Charakter:<br>Treue, Loyalität, Geduld<br> & Freundlichkeit<br>
+      <br>Hauptfiguren:<br>Cedric Diggory</div>
+    <div class="item3">Hufflepuffs Trinkpokal<br><br>Typ:<br>Horkruxe
+      <br><br>Magische Eigenschaften:<br>Besitzt angeblich mehrere Kräfte,<br> doch diese wurden nicht gründlich
+      getestet.<br><br>Wem es gehört:<br>
+      Voldemort hat es gestohlen<br>und zu einem Horkrux gemacht.<br> Es wurde später<br> von Hermine Granger zerstört.
+      <br><br>Erster Besitzer:<br>Helga Hufflepuff
+
+    </div>
+    <div class="item4"></div>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="Bilder/Hufflepuff/Helga Hufflepuff.jpg" style="width:70%">
+        <div class="text">Helga Hufflepuff</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="Bilder/Hufflepuff/Cedric Diggory.jpg" style="width:40%">
+        <div class="text">Cedric Diggory</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="Bilder/Hufflepuff/Hufflepuffs Cup.jpg" style="width:40%">
+        <div class="text">Hufflepuffs Cup</div>
+      </div>
+
+      
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </div>
+  <div class="item4"></div>
+
+</div>
+
+</body>
+
+</html>
